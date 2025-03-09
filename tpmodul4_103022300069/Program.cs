@@ -5,10 +5,14 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Soal 1 (Table Driven):");
+        Console.WriteLine("======= Soal 1 (Table Driven):");
         foreach (KodePos.Kelurahan kel in Enum.GetValues(typeof(KodePos.Kelurahan)))
         {
             Console.WriteLine(kel + " : " + KodePos.GetKodePos(kel));
         }
+
+        Console.WriteLine("\n======= Soal 2 (State Driven):");
+        DoorMachine doorMachine = new DoorMachine();
+        doorMachine.Simulasi();
     }
 }
